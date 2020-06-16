@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
     struct sockaddr_in clnt_addr; // client address
     socklen_t clnt_addr_size;
 
-    char message1[] = "Hello World";
+    char message1[] = "Hello World!";
 
     serv_sock = socket(PF_INET, SOCK_STREAM, 0);
 
@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
     write(clnt_sock, message1 + 4, 4);
     write(clnt_sock, message1 + 8, 4);
     write(clnt_sock, message1 + 12, sizeof(message1) - 12);
-    
+
     close(clnt_sock);
     close(serv_sock);
 
