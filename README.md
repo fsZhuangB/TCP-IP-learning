@@ -16,4 +16,7 @@ TCP/IP网络编程课程代码
     
 
 ## ch2-practise
-6. 
+5. 何种类型的套接字不存在数据边界？这类套接字接收数据时需要注意什么？
+	连接指向型TCP套接字不存在数据边界。因此输入输出函数的相应次数不具有意义。重要的不是函数的相应次数，而是**数据的收发量**。必须保证发送数据的量和接收数据的量是一致的。
+6. --
+    修改代码，见[ch2/exercise6_client.c](https://github.com/fsZhuangB/TCP-IP-learning/blob/master/ch2/exercise6_client.c)和[ch2/exercise6_server.c](https://github.com/fsZhuangB/TCP-IP-learning/blob/master/ch2/exercise6_server.c)
